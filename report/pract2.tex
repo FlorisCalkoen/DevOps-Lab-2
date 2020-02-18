@@ -1,0 +1,43 @@
+\documentclass[]{article}
+
+% Please add the following required packages to your document preamble:
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{url}
+
+\usepackage{caption}
+\usepackage{subcaption}
+
+
+\usepackage{listings}
+
+\newcommand{\shellcmd}[1]{\\\indent\indent\texttt{\footnotesize\# #1}\\}
+
+
+%opening
+\title{DevOps Practical 2: Service-oriented applications, testing, and containerization}
+\author{Floris Reinier Calkoen (10409599)}
+
+\newcommand{\chapsubhead}[1]{{\Large #1 \vspace{2ex}}}
+\newcommand{\chaptype}[1]{{\Large \itshape (#1) \vspace{2ex}}}
+
+\newcommand{\code}[1]{\texttt{#1}}
+
+{\bfseries\scshape}{\theparagraph}{1em}{}
+
+	\subsection{Introduction}
+
+	Docker containers package software together with all of its dependencies and provide a single, simple entry-point for running that software. This means that software runs more consistently and much less work is necessary to prepare the systems that the software will run on. Essentially, Docker containers make it possible to ensure that our software runs the same way wherever we use it — whether on a developer’s laptop in Cape Town or a production server in Lagos.
+	
+	\subsection{Service Granularity}
+	
+	Analyze the granularity of the service given to you in the 'student\_service.py' file. What are the advantages and disadvantages of separating the database from the service? Which database technologies (type of DB e.g., MySQL, MongoDB, etc. and platform e.g. cloud based, docker container, bear metal etc.) would you use and why?
+	
+From an operations standpoint, apart from portability containers also give more granular control over resources giving your infrastructure improved efficiency which can result in better utilization of your compute resources.	
+
+We host the source code for almost all of our software projects on GitHub and have Travis CI run automated tests as soon as the code there is updated. This helps us ensure the quality of our code and simplifies the automation of related tasks, such as releasing new versions of our software. Another advantage for us with Travis CI is that the service is free for open source projects and most of our code is open source. 
+
+	\section{}
+	
+\end{document}
